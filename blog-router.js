@@ -6,17 +6,9 @@ const jsonParser = bodyParser.json();
 
 const {BlogPosts} = require('./models');
 
-BlogPosts.create({
-  title: "Lost in the wild",
-  content: "Today I took a walk on the wild side..",
-  author: "John Brown"
-});
+BlogPosts.create("Lost in the wild", "Today I took a walk on the wild side..", "John Brown");
 
-BlogPosts.create({
-  title: "What",
-  content: "What the, what?!",
-  author: "Tina Fey"
-});
+BlogPosts.create("What","What the, what?!","Tina Fey");
 
 router.get('/', (req, res) => {
   res.json(BlogPosts.get());
@@ -36,7 +28,7 @@ router.post('/', jsonParser, (req, res) => {
   }
 
     console.log('Creating new post.');
-    const toBePosted = BlogPosts.create(req.body.title, req.body.content, req.body.author);
+    const toBePosted = BlogPosts.create(req.body.title, req.body.content, req.body.author, req.body.publishDate);
     res.status(201).json(toBePosted);
 });
 
@@ -61,7 +53,7 @@ router.put('/:id', jsonParser, (req, res) => {
 
   console.log('Updating your blog post.');
   const post = BlogPosts.update(req.body);
-  res.status(204).json(post);
+  res.status(200).json(post);
 });
 
 router.delete('/:id', jsonParser, (req, res) => {
