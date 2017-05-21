@@ -1,2 +1,9 @@
 language: node_js
 node_js: node
+deploy:
+  provider: heroku
+  api_key:
+    secure: bLli9uAuffsiBiNxG08nvR8RAa6jthqLzFC9iwGIDw+errDAEwGxFbKobev2jfbFf2yPHJyE79r0t8THQWF8qnxml9JEdB1wA+z2tCIu4jJxLqjJXn51XIUA0qHqzLPB/MZB2Lb0SrQR+fT2BTeePXWyeZHbWTfWMdIeOBBhdxDHJJ5TaFcjp0IshD4xFuj8rUsEd1NW9uE3a6O1QepgO2+CFGTCfxiUmFsxmOYLjLcFBwrqNmNrjXByi1sWqq5qkOE1Rs1Yr/jBd8mH0zdEC2g69VFGj3L89u3FxhXTxol2qQvVge6zyucPNErf5fbG2ZO4PcQawAvEuAuAZu+OK/a6jp7zTdamH0YQM4bWhpSlOy1/IRMefdmOYNYXQ9mS9AbROV225U/ek6VJtu5HOy67ewZvh10IGxU61JS4UQ7mU57nghqFSVHzlLjsCY3NSCe+HKOVVRbXGRWnWsmAfK/C4D7YJ5EBgxDgf8DtPBByQs7iobXWvnEUfYPv4JIGEmFvCUguru9WGkUM8Eq+kL/4AdKCqmG6OSUmr/TukCFc5WZ4+0Vi7tFRo3d5z1U8O3KKBT+CI/lTUJImIvzMnRvUwNB7KfCMUz9TdBFCvkTbIqCjRkV7TqrIu1+tu2WN+Dq99ejNGQ187AvraFKA7PPSKU7xx33bLm5TT6U6kt0=
+  app: protected-tor-75009
+  on:
+    repo: johncouldbe/blog-api
